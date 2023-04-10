@@ -1,0 +1,87 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+input[type="number"],
+select {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+  font-size: 16px;
+  background-color: #ffffff;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-size: 10px;
+  background-position-x: calc(100% - 10px);
+  background-position-y: 50%;
+  padding-right: 20px;
+}
+
+.divisas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.rates-div {
+  display: flex;
+  align-items: center;
+  background-color: #e7e7e7;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px;
+  font-size: 16px;
+}
+
+.bandera {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.datos {
+  display: flex;
+  flex-direction: column;
+}
+
+.nombre {
+  font-weight: bold;
+}
+
+.valor {
+  margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+  .main {
+    margin: 10px;
+  }
+  
+  .rates-div {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+  }
+  
+  .bandera {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}

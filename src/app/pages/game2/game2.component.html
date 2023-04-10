@@ -1,0 +1,18 @@
+<div class="contenedor"><h1>¡Dale a Diglett!</h1>
+
+<div class="botones-div">
+<button (click)="empezar()">Empezar a jugar</button>
+<button (click)="reiniciar()">Reiniciar juego</button>
+</div>
+
+<h2>Te quedan {{tiempoRestante}} segundos. Puntuación: {{puntuacion}} </h2>
+
+ <div class="b-grid">
+  <div *ngFor="let elemento of elementos">
+    <div [ngClass]="{'b-mole': elemento.id === aleatorio}" [class]="elemento.class" (click)="elemento.id === aleatorio ? puntos() : null">
+    </div>
+  </div>
+</div>
+
+</div>
+  

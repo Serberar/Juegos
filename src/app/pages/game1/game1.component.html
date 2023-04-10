@@ -1,0 +1,11 @@
+<div class="contenedor">
+  <h1>¡Encuentra las parejas!</h1>
+  <button (click)="reiniciar()">Reiniciar juego</button>
+<div class="memo">
+    <div class="div-image" *ngFor="let card of cards" (click)="vuelta(card)">
+      <img *ngIf="card.seleccionada" [src]="card.img" />
+      <img *ngIf="!card.seleccionada && !iguales.includes(card)" src="assets/img/game1/universe.svg" />
+      <img *ngIf="!card.seleccionada && iguales.includes(card)" src="assets/img/game1/tick.svg" />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="main">
+
+  <input type="number" [(ngModel)]="numero" (ngModelChange)="actualizarValor()" [min]="1" />
+
+  <select [(ngModel)]="monedaSeleccionada" (ngModelChange)="actualizarValor()">
+    <option *ngFor="let opciones of monedas" [value]="opciones">
+      {{ opciones }}
+    </option>
+  </select>
+
+  <div class="divisas">
+    <div *ngFor="let tasa of datos | keyvalue">
+      <div class="rates-div" (click)="actualizarSeleccion(tasa.key)">
+        <img class="bandera" src="assets/img/banderas/{{tasa.key}}.png" alt="{{tasa.key}}"> 
+        {{ tasa.key }}: {{ tasa.value.toFixed(2) }}
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,25 @@
+<div class="contenedor">
+
+  <h1>¡Encuentra el tesoro!</h1>
+
+  <div class="botones-div">
+  <button (click)="empezar()">Empezar a jugar</button>
+  <button (click)="reiniciar()">Reiniciar juego</button>
+  </div>
+<h2>Numero de intentos: {{intentos}}</h2>
+<div class="juego">
+<table>
+  <tbody>
+    <tr *ngFor="let fila of arrayFilasColumnas">
+      <td class="div-image" *ngFor="let columna of fila" (click)="comprobar(columna)">
+        <img *ngIf="!columna.volteado" [src]="imagen" alt="Busca el tesoro">
+        <img *ngIf="columna.volteado && columna.id == this.aleatorio" src="./assets/img/game3/chest.png" alt="Tesoro encontrado">
+        <img *ngIf="columna.volteado && columna.id !== this.aleatorio" src="./assets/img/game3/skull.png" alt="Tesoro no encontrado">
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+</div>
