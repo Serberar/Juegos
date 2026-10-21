@@ -1,27 +1,31 @@
-# Exchanges
+# Juegos y conversor de divisas (Angular)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
+Aplicación en Angular con un **conversor de divisas** en tiempo real y **tres minijuegos**.
 
-## Development server
+## Secciones
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+| Sección | Qué hace |
+|---|---|
+| **Inicio** | Conversor de divisas: eliges cantidad y moneda y ves el cambio a las demás, con su bandera. Los tipos de cambio salen de la API pública [VATcomply](https://www.vatcomply.com/). |
+| **Encuentra las parejas** | Juego de memoria con cartas de planetas. |
+| **Dale a Diglett** | Juego tipo *whack-a-mole* con tiempo límite y puntuación. |
+| **Encuentra el tesoro** | Busca el tesoro escondido en el tablero; cuenta los intentos. |
 
-## Code scaffolding
+## Tecnologías
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Angular 15, TypeScript, `HttpClient` y `ngModel` (FormsModule).
 
-## Build
+## Cómo arrancarlo
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```bash
+npm install
+npx ng serve      # http://localhost:4200
+```
 
-## Running unit tests
+## Repos relacionados
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+[conversor](https://github.com/Serberar/conversor) es una versión anterior de este proyecto, con el conversor terminado y los juegos sin hacer.
 
-## Running end-to-end tests
+## Autor
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Sergio Bernabé
